@@ -1,0 +1,5 @@
+Flag{roadToHappiness}
+Flag{expertHere}
+Flag{masterOfCrypto}
+Flag{smartestPersonAlive}
+Flag{let'sGOOOOO}

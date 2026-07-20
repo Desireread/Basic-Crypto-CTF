@@ -1,0 +1,5 @@
+Flag{thisIsFun}
+Flag{youFoundIt}
+Flag{Yay}
+Flag{done!}
+Flag{amICrazy?}
