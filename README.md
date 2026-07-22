@@ -12,7 +12,13 @@ The purpose of this CTF is to test the participant’s logical thinking, compreh
 
 ## Help
 If you get stuck, you can look to any of the following sections in Steps to Solve for hints or guidance:  
-[Build and Run the Docker Container](#1-build-and-run-the-docker-container)
+[Build and Run the Docker Container](#1-build-and-run-the-docker-container)  
+[Decode directions.txt](#2-decode-directionstxt)  
+[Find the Picture Named 'crazy.jpg'](#3-find-the-picture-named-crazyjpg)  
+[Optional Step: Check for Hidden Files](#4-optional-step-check-for-hidden-files)  
+[Extract the Imbedded File](#5-extract-the-imbedded-file)
+[Find the Correct Flag](#6-find-the-correct-flag)  
+[Correct Flag](#correct-flag)
 
 ## Steps to Solve
 ### 1. Build and Run the Docker Container
@@ -80,7 +86,7 @@ b. Enter `y` when prompted, then enter `tomfoolery19` when prompted for the pass
 > You may remember `tomfoolery19` from decoding directions.txt earlier. This was the password used to imbed the hidden file into `crazy.jpg`, therefore, when you use this password to uncover hidden files from `crazy.jpg`, you should see information on the imbedded them. In this case, there is only 1 imbedded file named `sha256.txt`.
 > 
 
-### 5. Extract the Imbedded file
+### 5. Extract the Imbedded File
 a. Run steghide extract -sf crazy.jpg  
 > [!Note]
 > - `extract` indicates we want to retieve hidden data
@@ -92,7 +98,7 @@ b. Enter `tomfoolery19` when prompted for a passphrase
 > To ensure the file was extracted, run `ls`. You should see the file `sha256.txt` is now in the directory
 >
 
-### 6. Find the correct flag
+### 6. Find the Correct Flag
 a. Run `cat sha256.txt` to print out all possible flags  
 b. Run `echo -n "fullFlag" | sha256sum` to print sha256 hash for each flag, replacing `fullFlag` with each flag. For example, to find the sha256 hash of the first flag, run `echo -n "Flag{youFoundIt}" | sha256sum`
 > [!Note]
